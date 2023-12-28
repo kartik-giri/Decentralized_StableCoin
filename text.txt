@@ -1,0 +1,60 @@
+(Relative Stability) Anchored or Pegged -> $1
+ 1. ChainLink price feed.
+ 2. Set a function to exchange ETH & BTC -> $$
+Stability Mechanism (Minting) : Algorithmic (Decentralized)
+ 1.People can only mint the stablecoin with enough collateral (coded)
+Collateral Type : Exogenous (Crypto)
+ 1. WETH
+ 2. WBTC 
+
+ // Most time developers create the interface for the contract to list out every function of the contract.
+ BASIC FUNCTIONS WE NEED IN ENGINE:-
+1. depositCollateralAndMintOsc();
+2. depositCollateral();
+2. redeemCollateralForOsc();
+3. burnDsc();
+4. liquidate(); -> 
+   # I deposit $100 worth of eth.
+   # get $50 of stable coin.
+   # but we protocol have threshold of 150%. 
+   # it would be $75,
+   # if the threshold go less than $75.
+   # I can be liquidate.
+   # the other user can pay my $50 stablecoin and get my collateral as reward.
+5 getHeathFactor(); 
+AND A LOT MORE FUNCTIONS  
+
+# new contractName(); is use to deploy contract where as ContractVar = ContractName(ContractAddress) is use to interact with it or to create its instance.
+#Test is mostly done using the mocks contracts AND THEN REAL ONCHAIN CONTRACTS
+
+# we should have the 
+ DeployOsc deployer;
+    OnChainStableCoin osc;
+    OSCEngine engine;
+    HelperConfig config;
+    address wethUsdPriceFeed;
+    address weth; 
+variable even though we are getting them as returning value from the contract functions
+
+#we need allowance function because mostly times the transfer function is called from inside the  contract function so we need it and call transferfrom function.
+
+#BEST PRACTICES IS TO WRITE TEST SIMOULTANEOUSLY AS WRTING CONTRACT FUNCTIONS
+
+#WHAT ARE OUR INVARIENTS/PROPERTIES?
+so that we can write stateless and statefull fuzz testing.
+
+#InvarientTest.t.sol will hold //Have our invarients aka properties hold always right.
+#Handler.t.sol -> //Hanlder is gonna to narrow down the way we call function
+
+fail_on_revert = false //fail_on_revert = false means if call revert than test will be not fail and if 
+it is true than if function call revert than the test will be failed.
+
+#WELL HERE I THINK WE USE erc20 FRO TYPECASTING WHEN WE ARE USING DEPLOYED CONTRACT ON CHAIN
+AND IERC20 TOKEN WHEN WE ARE USING MOCK AND OTHER CONTRACTS
+
+#Actuaaly we have to folders fro invariant test:-
+1.continueOnrevert-> where we write quicker more looser test which run even the call for functions are reverted.
+2.continueOnRevert-> where every functions call or tx should true and it is mostly more strict and narrow down.
+AND IT IS RECOMMENDED TO WRITE NOTH TESTS
+
+#In invariant testing it calls the target handler contract or invariant_test with tons of sequence of functions and it also call with random addresses as well. 

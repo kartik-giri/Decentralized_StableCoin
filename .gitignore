@@ -9,6 +9,8 @@ out/
 
 # Docs
 docs/
+.txt
 
 # Dotenv file
 .env
+
