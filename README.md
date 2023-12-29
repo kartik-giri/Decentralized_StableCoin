@@ -1,66 +1,19 @@
-## Foundry
+## Decentralized Stablecoin
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+# My Learnings:
+1.Foundry
+2.Chainlink Oracle
+3.Openzeppelin
+4.Erc20 Token
+5.Contract Deployment
+6.Fuzz testing
+7.Invariant testing
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+# Features:
+1. Exogeneous Collateralization: Our stablecoin is backed by external assets, ensuring a robust and reliable peg to the desired value.
+2. Smart Contract Security: Built on a foundation of secure smart contracts, prioritizes the safety of user funds and ensures trustless transactions.
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+# How It Works:
+1. Collateralization: Users lock exogeneous assets into the protocol to mint stablecoins.
+2. Peg Maintenance: Smart contracts autonomously manage the collateral, adjusting ratios to maintain the stablecoin's peg.
