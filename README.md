@@ -1,13 +1,13 @@
 ## Decentralized Stablecoin
 
 # My Learnings:
-1.Foundry
-2.Chainlink Oracle
-3.Openzeppelin
-4.Erc20 Token
-5.Contract Deployment
-6.Fuzz testing
-7.Invariant testing
+1.Foundry.
+2.Chainlink Oracle.
+3.Openzeppelin.
+4.Erc20 Token.
+5.Contract Deployment.
+6.Fuzz testing.
+7.Invariant testing.
 
 
 # Features:
